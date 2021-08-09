@@ -1,58 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-:root{ 
-    /* Background Color */
-    --bg-danger:#f63440;
-    --bg-white:#fff;
-    --bg-light-white:#f5f5f5;
+:root {
+  /* Background Color */
+  --bg-danger: #f63440;
+  --bg-white: #fff;
+  --bg-light-white: #f5f5f5;
 
-    /* Text Color */
-    --primary-font:"Poppins", sans-serif;
-    --text-white:#fff;
-    --text-black:#121212; 
-    --text-danger:#f63440; 
-    --text-gray:#aaa;
-    --text-dark-gray:#777;
-}  
+  /* Text Color */
+  --primary-font: "Poppins", sans-serif;
+  --text-white: #fff;
+  --text-black: #121212;
+  --text-danger: #f63440;
+  --text-gray: #aaa;
+  --text-dark-gray: #777;
+}
+
 body {
-    font-family: var(--primary-font);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.75rem;
-    background:var(--bg-white);
-    color: var(--text-black);
-    overflow-x:hidden;
-} 
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  background: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+}
 
 /* Custom CSS */
 a,
-a:hover{
-    text-decoration: none;
+a:hover {
+  text-decoration: none;
 }
-p{
-    margin:0;
+
+p {
+  margin: 0;
 }
-.btn-danger{
-    background:var(--bg-danger);
-    border-color:var(--bg-danger);
-    padding:0.8rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+
+.btn-danger {
+  background: var(--bg-danger);
+  border-color: var(--bg-danger);
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
-.btn-danger:hover{
-    color:var(--text-danger);
-    background:transparent; 
+
+.btn-danger:hover {
+  color: var(--text-danger);
+  background: transparent;
 }
 
 
 /* Header */
-#header .fixed-top  {
-  box-shadow: 0 0.125rem 0.625rem rgba(0,0,0, 0.1);
+#header .fixed-top {
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 #header .navbar-nav .nav-item .nav-link {
@@ -63,7 +67,7 @@ p{
 
 
 #header .navbar-nav .nav-item .nav-link:hover,
-#header .navbar-nav .nav-item .nav-link.active{
+#header .navbar-nav .nav-item .nav-link.active {
   color: var(--text-danger);
 }
 
@@ -80,16 +84,44 @@ p{
 .home .home-banner-1,
 .home .home-banner-2 {
   background-size: cover;
-  background-position: 90% center;
+  background-position: center center;
   background-repeat: no-repeat;
-  min-height: 650px;
+  min-height: 560px;
   position: relative;
 }
 
 .home .home-banner-1 {
-  background-image: url("/assets/slider1.png");
+  background-image: url("/assets/hero-1.jpg");
 }
 
 .home .home-banner-2 {
-  background-image: url("/assets/slider2.png");
+  background-image: url("/assets/hero-2.jpg");
+}
+
+.home .home-banner .home-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.home .home-banner .home-banner-text h1 {
+  font-size: 6rem;
+}
+
+.home .carousel-indicators [data-bs-target] {
+  background-color: var(--bg-danger);
+  width: 2.5rem;
+  height: .313rem;
+}
+
+.home .carousel-control-next-icon,
+.home .carousel-control-prev-icon {
+  background: transparent;
+}
+
+.home .slider-icon {
+  color: var(--bg-danger);
+  font-size: 3rem;
+  font-weight: 600;
 }
